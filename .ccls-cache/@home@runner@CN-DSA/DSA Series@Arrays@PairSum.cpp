@@ -1,5 +1,5 @@
 #include<iostream>
-using namespace std;
+using namespace std
 
 
 int Count(int arr[], int n, int sum){
