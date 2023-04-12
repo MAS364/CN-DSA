@@ -6,7 +6,7 @@ int printArray(int arr[], int n){
 for(int i=0; i<n; i++){
     cout<<arr[i];
 }
-}
+};
 
 int Sort(int *arr, int n){
 
