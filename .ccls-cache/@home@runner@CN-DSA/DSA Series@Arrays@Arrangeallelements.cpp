@@ -16,3 +16,14 @@ void arrange(int arr[], int n){
         }
     }
 }
+
+
+
+
+
+
+
+
+
+
+//  rm .git/index.lock
