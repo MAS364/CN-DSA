@@ -1,31 +1,34 @@
 #include<iostream>
-using namespace std
+#include <bits/stdc++.h>
+using namespace std;
 
+int pairSum(int arr[], int n, int num){
+sort(arr, arr + n);
+int i = 0, j = n-1, sum = 0, count=0;
+while(i<j){
+ sum = arr[i] + arr[j];
+ if(sum == num){
+    count++;
+    i++;
+    j--;
+ }
+ else if(sum < num){
+    i++;
+ }
+ else{
+    j--;
+ }
+}
 
-int Count(int arr[], int n, int sum){
+return count;
 
-  int i=0,j=n-1,k=0,count=0;
-  while(i<j){
-    k = arr[i] + arr[j];
-    if(k == sum){
-      count++;
-      i++;
-      j--;
-    }
-    else if(k > sum){
-      j--;
-    }
-    else{
-      i++;
-    }
-  }
-  return count;
 }
 
 
 int main(){
-  int sum = 17;
-  int arr[]= {1,5,7,10,11,16};
+int arr[]= {2,8,6,10,5,-2,5};
+int num = 10;
+cout<<pairSum(arr,7,num);
 
-   cout<<Count(arr,6,17);
 }
+
